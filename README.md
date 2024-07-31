@@ -13,7 +13,7 @@ Record a person's movement and gait cycle and analyze if it is normal or not.
 * ***SD Card Module*** for saving data in a CSV file using Arduino.
 * ***4 FSR Sensors*** for recording a person's movement.
 * ***ATmega2560*** for reading and saving high sample rate data.
-![Circuit](images/circuit.jpg)
+![Circuit](/images/circuit.jpg)
 ## Connections (ATmega2560 to Sensors)
 * SD Card Module 5V to Arduino 5V
 * SD Card Module GND to Arduino GND
