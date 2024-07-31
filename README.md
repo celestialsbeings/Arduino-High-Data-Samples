@@ -13,7 +13,7 @@ Record a person's movement and gait cycle and analyze if it is normal or not.
 * ***SD Card Module*** for saving data in a CSV file using Arduino.
 * ***4 FSR Sensors*** for recording a person's movement.
 * ***ATmega2560*** for reading and saving high sample rate data.
-
+![Circuit](images/circuit.jpg)
 ## Connections (ATmega2560 to Sensors)
 * SD Card Module 5V to Arduino 5V
 * SD Card Module GND to Arduino GND
@@ -28,3 +28,6 @@ Record a person's movement and gait cycle and analyze if it is normal or not.
 The most difficult part was recording ***high sample rate data***. Recording data from the FSR sensors and saving it at a high sample rate to a CSV file was manageable. However, problems arose with the ***MPU-6050***. Initially, I used the Adafruit library to read the data and convert it to human-readable form. However, this process took too much time, causing issues with saving the data correctly to the CSV file, resulting in saving `?,?,?` instead of real data.
 
 To solve this problem, I removed the Adafruit library and used the `Wire.h` library to address the MPU-6050 registers directly and retrieve raw data. This approach allowed me to efficiently save the data to the CSV file and complete the project successfully.
+
+## Result Data
+![Data](images/data.png)
