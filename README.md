@@ -10,10 +10,14 @@ Record a person's movement and gait cycle and analyze if it is normal or not.
 
 ![Circuit](images/circuit.jpg)
 ## Components Used
+* Switch
 * ***MPU-6050*** for capturing acceleration and gyroscopic movement.
 * ***SD Card Module*** for saving data in a CSV file using Arduino.
 * ***4 FSR Sensors*** for recording a person's movement.
 * ***ATmega2560*** for reading and saving high sample rate data.
+* LCD 16x2 module with I2C controller.
+* Rotatory Encoder for input data to perform calculation.
+*  For power supply power bank module and 3.7v battery.
 ## Connections (ATmega2560 to Sensors)
 * SD Card Module 5V to Arduino 5V
 * SD Card Module GND to Arduino GND
@@ -23,6 +27,9 @@ Record a person's movement and gait cycle and analyze if it is normal or not.
 * MPU-6050 SDA & SCL to Arduino SDA & SCL
 * MPU-6050 VCC & GND to Arduino 5V & GND
 * FSR sensor output to Arduino A0 to A3
+* Battery + & - to power bank moudle + & -.
+* Power Bank Module + to switch & switch other leg to arduino 5v.
+* Power Bank Module - to arduino GND.
 
 ## Challenges and Solutions
 The most difficult part was recording ***high sample rate data***. Recording data from the FSR sensors and saving it at a high sample rate to a CSV file was manageable. However, problems arose with the ***MPU-6050***. Initially, I used the Adafruit library to read the data and convert it to human-readable form. However, this process took too much time, causing issues with saving the data correctly to the CSV file, resulting in saving `?,?,?` instead of real data.
