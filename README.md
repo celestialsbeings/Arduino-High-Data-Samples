@@ -1,4 +1,4 @@
-# Arduino-High-Data-Samples
+# Gait Assessment Device
 
 ## Task
 Record a person's movement and gait cycle and analyze if it is normal or not.
